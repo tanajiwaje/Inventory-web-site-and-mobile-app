@@ -1,0 +1,33 @@
+name: Mobile App CI
+
+on:
+  push:
+    paths:
+      - "mobile-app/**"
+  pull_request:
+    paths:
+      - "mobile-app/**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Expo CLI
+        run: npm install -g expo-cli
+
+      - name: Install dependencies
+        working-directory: mobile-app
+        run: npm install
+
+      - name: Expo check
+        working-directory: mobile-app
+        run: npx expo doctor
