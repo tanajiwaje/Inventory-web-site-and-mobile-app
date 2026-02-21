@@ -54,3 +54,22 @@ step 6 : use command npm start
         it will show the qr code : download expo go in playstore and scan qr code 
 
 
+*** || Mobile Application Get .Apk install any android Steps || **
+
+step 1 : intalltion need node , java
+step 2 : navigate to main android application example C:\Users\Dell\Desktop\AI Tools\mobile-app>
+step 3 : npx expo prebuild  if not create it. it will create android folder 
+step 4 : create assests folder example mkdir android\app\src\main\assets
+step 5 : paste this command 
+        npx react-native bundle ^
+        --platform android ^
+        --dev false ^
+        --entry-file index.js ^
+        --bundle-output android/app/src/main/assets/index.android.bundle ^
+        --assets-dest android/app/src/main/res
+step 6 : cd android 
+step 7 : gradlew assembleRelease
+step 8 : after 10-15 mins get -> android/app/build/outputs/apk/release/app-release.apk
+step 9 : backend should run example backend run 4000 
+step 10: CMD  ngrok http 4000 it create tunnel we so frontend communicate to the backend withoud error
+ 
