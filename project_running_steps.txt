@@ -1,0 +1,56 @@
+
+
+*** || React Web Application Running Steps || **
+step 1 :reach the server C:\Users\Dell\Desktop\AI Tools\server>
+step 2 :run the command npm run dev  
+        it will show : Connected to MongoDB
+                        Server is running on http://localhost:4000 
+step 3 :open CMD : check ngrok install or not if not download it 
+step 4 :reach the fronend example C:\Users\Dell\Desktop\AI Tools\frontend>
+step 5 :run the frontend example C:\Users\Dell\Desktop\AI Tools\frontend>npm run dev
+        it will show like below 
+         VITE v5.4.21  ready in 1749 m
+         ➜  Local:   http://localhost:5173/
+         ➜  Network: use --host to expose
+step 6 :CMD enter  ngrok http 5173 
+        it will show :
+        Session Status                online    
+        Account                       twaje1998@gmail.com (Plan: Free)      
+        Update                        update available (version 3.36.1, Ctrl-U to update) 
+        Version                       3.36.0-msix-stable  
+        Region                        India (in) 
+        Latency                       75ms
+        Web Interface                 http://127.0.0.1:5173  
+        Forwarding                    https://augustly-castled-harry.ngrok-free.dev -> http://localhost:5173 
+        Connections                   ttl     opn     rt1     rt5     p50     p90   
+                                      0       0       0.00    0.00    0.00    0.00 
+step 7 : https://augustly-castled-harry.ngrok-free.dev : accessble to public network
+
+
+
+
+*** || Mobile Application Running Steps || **
+
+step 1 : reach the server C:\Users\Dell\Desktop\AI Tools\server>
+step 2 : run the command npm run dev  
+         it will show : Connected to MongoDB
+                        Server is running on http://localhost:4000
+step 3 : open CMD : check ngrok install or not if not download it 
+step 4 :CMD enter  ngrok http 4000 
+        it will show :
+        Session Status                online    
+        Account                       twaje1998@gmail.com (Plan: Free)      
+        Update                        update available (version 3.36.1, Ctrl-U to update) 
+        Version                       3.36.0-msix-stable  
+        Region                        India (in) 
+        Latency                       75ms
+        Web Interface                 http://127.0.0.1:4040  
+        Forwarding                    https://augustly-castled-harry.ngrok-free.dev -> http://localhost:4000 
+        Connections                   ttl     opn     rt1     rt5     p50     p90   
+                                      0       0       0.00    0.00    0.00    0.00  
+
+step 5 : locate the mobile app example : C:\Users\Dell\Desktop\AI Tools\mobile-app>
+step 6 : use command npm start
+        it will show the qr code : download expo go in playstore and scan qr code 
+
+

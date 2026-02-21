@@ -1,0 +1,134 @@
+User Manual - Inventory Management Application
+
+1. Document Purpose
+This manual helps end users operate the Inventory Management Application from web and mobile interfaces, including login, inventory operations, transaction handling, reports, and account/profile tasks.
+
+2. Application Access
+2.1 Web App
+Open the provided URL in browser (local or public ngrok URL).
+Recommended browsers: latest Chrome, Edge, Firefox.
+If URL is ngrok-based, click through ngrok warning page once (if shown).
+2.2 Mobile App (Expo Go)
+Install Expo Go from Play Store/App Store.
+Scan the QR code shared by the project owner.
+Ensure mobile network can reach backend API endpoint.
+
+3. User Roles
+Admin: Full control over inventory, users, reports, and audit visibility.
+Seller: Can manage seller-side transactions and purchase-related flow.
+Buyer: Can manage buyer-side transactions and sales-related flow.
+Access to menus/screens depends on assigned role.
+
+4. Login and Session
+4.1 Sign In
+Open login page.
+Enter registered email and password.
+Click Login.
+4.2 Sign Out
+Use Logout from profile/menu section.
+Always logout on shared systems.
+4.3 Session Notes
+If token expires or is invalid, system redirects to login.
+Re-login to continue.
+
+5. Profile Management
+Open Profile screen.
+Update editable fields such as name, phone, address, company details (if enabled).
+Save changes.
+Re-login only if prompted.
+
+6. Inventory Management
+6.1 View Inventory
+Go to Inventory or Stocks.
+Use search/filter/pagination if available.
+Review item details: name, SKU, quantity, price, timestamps.
+6.2 Add Item
+Click Add or Create Item.
+Fill required fields.
+Submit form and confirm success message.
+6.3 Edit Item
+Select item row.
+Click Edit.
+Update values.
+Save.
+6.4 Delete Item
+Select item.
+Click Delete.
+Confirm action.
+Deleted item is removed from active listing.
+
+7. Transactions and Orders
+7.1 Transaction List
+Open Transactions.
+View movement history (inbound/outbound/update events).
+Use page controls to browse older records.
+7.2 Purchase Orders
+Open Purchase Orders.
+Create or review PO records (role-based).
+Generate/download PDF when available.
+7.3 Sales Orders
+Open Sales Orders.
+Create or review SO records (role-based).
+Generate/download PDF when available.
+
+8. Reports and Dashboard
+Open Reports or Dashboard.
+Review metrics summaries and inventory insights.
+Refresh page for latest server data if needed.
+
+9. Audit Logs (Admin)
+Open Audit Logs.
+Track user/system actions.
+Use pagination and filters where available.
+Intended for traceability and compliance review.
+
+10. Import/Export
+10.1 Export
+Use Export action in inventory module.
+File is downloaded in supported format.
+10.2 Import
+Use Import action.
+Upload CSV/template file.
+Check validation result and correction messages.
+
+11. Public/Company Information
+Public company details can be read from public endpoints/screens.
+This section is generally read-only for non-admin users.
+
+12. Error Handling Guide
+401/Unauthorized: login again.
+403/Forbidden: role lacks permission.
+500/Internal Server Error: retry; if repeated, contact admin.
+Network Error: verify internet/LAN and backend availability.
+
+13. Best Practices
+Keep strong password and do not share credentials.
+Validate SKU/quantity/price before saving.
+Avoid duplicate item creation.
+Export critical data periodically.
+Logout after use on shared devices.
+
+14. Troubleshooting
+14.1 Web Not Loading
+Verify frontend URL.
+Confirm backend is running.
+If ngrok URL used, confirm tunnel is active.
+14.2 Mobile Cannot Fetch Data
+Check EXPO_PUBLIC_API_URL points to reachable backend.
+Ensure phone and backend are on same LAN or public URL is valid.
+Restart Expo app after env changes.
+14.3 Login Fails
+Confirm email/password.
+Check if account status is active.
+Ask admin to reset credentials if needed.
+
+15. Support Handover Template
+Share this info when reporting an issue:
+
+User role
+Screen/page name
+Action attempted
+Timestamp
+Screenshot/error message
+URL used (local/ngrok)
+Device/browser type

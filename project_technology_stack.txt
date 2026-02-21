@@ -1,0 +1,40 @@
+Frontend (frontend)
+
+1. React 18.3.1: UI library for component-based web rendering and state-driven updates.
+2. React DOM 18.3.1: Browser renderer that mounts React components into HTML.
+3. React Router DOM 6.26.2: Client-side routing for SPA navigation without full page reload.
+4. Vite 5.4.x: Fast dev server + build tool for modern frontend workflows.
+5. @vitejs/plugin-react 4.3.1: Enables React Fast Refresh and JSX transform in Vite.
+6. TypeScript 5.5.x: Static typing for safer refactors and better IDE tooling.
+7. Vite proxy (/api -> :4000): Forwards frontend API calls to backend in local dev to avoid CORS/manual URL switching.
+8. .ngrok.io: Allows public tunnel hostnames during external testing via ngrok.
+
+Backend (server)
+
+1. Node.js + Express 4.21.1: HTTP server framework for REST endpoints and middleware pipeline.
+2. TypeScript 5.6.x: Type-safe backend code and compile-to-JS build output.
+3. Mongoose 8.6.1: MongoDB ODM for schema modeling, validation, and query abstraction.
+4. dotenv 16.4.5: Loads runtime configuration from .env to avoid hardcoding secrets/ports.
+5. cors 2.8.5: Controls cross-origin requests between frontend/mobile and backend.
+6. jsonwebtoken 9.0.2: Creates/verifies JWT tokens for stateless auth.
+7. bcryptjs 2.4.3: Password hashing for secure credential storage.
+8. multer 1.4.5-lts.1: Handles multipart/form-data file upload streams.
+9. morgan 1.10.0: Request logging for debugging and traffic visibility.
+10. pdfkit 0.15.0: Programmatic PDF generation for printable/export documents.
+11. csv-parse 5.6.0: Parses CSV input for import pipelines.
+12. ts-node-dev 2.0.0: Development runner with auto-restart on file changes.
+13. ESLint + Prettier: Enforces consistent code quality and formatting rules.
+
+Mobile App (mobile-app)
+
+1. Expo 54: Managed React Native toolchain for fast local/mobile development and QR-based runs.
+2. React Native 0.81.5: Native mobile UI runtime for Android/iOS.
+3. React 19.1.0: Core component/state engine shared with RN ecosystem.
+4. TypeScript 5.9.x: Type safety and better maintainability in mobile codebase.
+5. React Navigation (native/native-stack/bottom-tabs): Standard navigation architecture for screen stack and tab flows.
+6. @react-native-async-storage/async-storage: Persistent local key-value storage (tokens/preferences/cache).
+7. @react-native-community/datetimepicker: Native date/time selection UI component.
+8. react-native-safe-area-context: Handles notches/status-bar safe insets correctly.
+9. react-native-screens: Native screen primitives for better navigation performance.
+10. react-native-web: Optional web target compatibility for RN components.
+11. EXPO_PUBLIC_API_URL: Environment-based backend base URL, so app can switch between local/ngrok endpoints without code changes.
